@@ -40,6 +40,7 @@ export function Footer() {
                 { label: "Blog", to: "/blog" },
                 { label: "Pricing", to: "/pricing" },
                 { label: "Contact", to: "/contact" },
+                { label: "Data Analytics", to: "/data-analytics" },
               ].map((l) => (
                 <li key={l.label}>
                   <Link to={l.to} className="text-sm text-muted-foreground hover:text-foreground transition-colors">{l.label}</Link>
