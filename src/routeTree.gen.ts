@@ -10,9 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as DataAnalyticsRouteImport } from './routes/data-analytics'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AiSolutionsRouteImport } from './routes/ai-solutions'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -20,6 +23,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesRoute = ResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PricingRoute = PricingRouteImport.update({
@@ -32,9 +40,19 @@ const PortfolioRoute = PortfolioRouteImport.update({
   path: '/portfolio',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DataAnalyticsRoute = DataAnalyticsRouteImport.update({
+  id: '/data-analytics',
+  path: '/data-analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AiSolutionsRoute = AiSolutionsRouteImport.update({
@@ -57,18 +75,24 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/ai-solutions': typeof AiSolutionsRoute
+  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/data-analytics': typeof DataAnalyticsRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
+  '/resources': typeof ResourcesRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/ai-solutions': typeof AiSolutionsRoute
+  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/data-analytics': typeof DataAnalyticsRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
+  '/resources': typeof ResourcesRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
@@ -76,9 +100,12 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/ai-solutions': typeof AiSolutionsRoute
+  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/data-analytics': typeof DataAnalyticsRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
+  '/resources': typeof ResourcesRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
@@ -87,27 +114,36 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/ai-solutions'
+    | '/blog'
     | '/contact'
+    | '/data-analytics'
     | '/portfolio'
     | '/pricing'
+    | '/resources'
     | '/services'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/ai-solutions'
+    | '/blog'
     | '/contact'
+    | '/data-analytics'
     | '/portfolio'
     | '/pricing'
+    | '/resources'
     | '/services'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/ai-solutions'
+    | '/blog'
     | '/contact'
+    | '/data-analytics'
     | '/portfolio'
     | '/pricing'
+    | '/resources'
     | '/services'
   fileRoutesById: FileRoutesById
 }
@@ -115,9 +151,12 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AiSolutionsRoute: typeof AiSolutionsRoute
+  BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
+  DataAnalyticsRoute: typeof DataAnalyticsRoute
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
+  ResourcesRoute: typeof ResourcesRoute
   ServicesRoute: typeof ServicesRoute
 }
 
@@ -128,6 +167,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources': {
+      id: '/resources'
+      path: '/resources'
+      fullPath: '/resources'
+      preLoaderRoute: typeof ResourcesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing': {
@@ -144,11 +190,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PortfolioRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/data-analytics': {
+      id: '/data-analytics'
+      path: '/data-analytics'
+      fullPath: '/data-analytics'
+      preLoaderRoute: typeof DataAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ai-solutions': {
@@ -179,9 +239,12 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AiSolutionsRoute: AiSolutionsRoute,
+  BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
+  DataAnalyticsRoute: DataAnalyticsRoute,
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
+  ResourcesRoute: ResourcesRoute,
   ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
