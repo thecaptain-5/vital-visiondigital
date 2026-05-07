@@ -73,10 +73,6 @@ function HomePage() {
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-glass-border bg-glass px-4 py-2 text-sm text-neon-blue mb-8 animate-fade-in-up backdrop-blur-sm">
-              <Sparkles className="h-4 w-4" />
-              Next-Generation Digital Solutions
-            </div>
             <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-7xl leading-[1.1] animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Building Intelligent Digital Experiences for{" "}
               <span className="gradient-text">Modern Brands.</span>
