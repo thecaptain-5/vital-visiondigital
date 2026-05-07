@@ -59,7 +59,7 @@ export function Footer() {
                 <Mail className="h-4 w-4 text-neon-blue" /> mvitalvision@gmail.com
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <MessageCircle className="h-4 w-4 text-neon-blue" /> +233 XX XXX XXXX
+                <MessageCircle className="h-4 w-4 text-neon-blue" /> +233 50 952 6775
               </li>
             </ul>
           </div>
