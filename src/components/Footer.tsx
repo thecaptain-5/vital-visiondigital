@@ -23,7 +23,7 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-4 uppercase tracking-wider">Services</h4>
             <ul className="space-y-2.5">
-              {["Web Design", "AI Websites", "Graphic Design", "Brand Identity"].map((s) => (
+              {["Web Design", "AI Websites", "Graphic Design", "Brand Identity", "Data Analytics"].map((s) => (
                 <li key={s}>
                   <Link to="/services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{s}</Link>
                 </li>
@@ -40,7 +40,6 @@ export function Footer() {
                 { label: "Blog", to: "/blog" },
                 { label: "Pricing", to: "/pricing" },
                 { label: "Contact", to: "/contact" },
-                { label: "Data Analytics", to: "/data-analytics" },
               ].map((l) => (
                 <li key={l.label}>
                   <Link to={l.to} className="text-sm text-muted-foreground hover:text-foreground transition-colors">{l.label}</Link>
