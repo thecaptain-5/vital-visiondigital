@@ -56,7 +56,7 @@ export function Footer() {
                 <MapPin className="h-4 w-4 text-neon-blue" /> Accra, Ghana
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4 text-neon-blue" /> hello@vitalvision.com
+                <Mail className="h-4 w-4 text-neon-blue" /> mvitalvision@gmail.com
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MessageCircle className="h-4 w-4 text-neon-blue" /> +233 XX XXX XXXX
