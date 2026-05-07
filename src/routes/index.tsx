@@ -35,7 +35,7 @@ const services = [
   { icon: BarChart3, title: "Analytics Dashboards", desc: "Data visualization and business intelligence." },
   { icon: Share2, title: "Social Media Design", desc: "Scroll-stopping content for every platform." },
   { icon: Bot, title: "AI Automation", desc: "Smart workflows for business efficiency.", badge: "Coming Soon" },
-  { icon: Package, title: "Digital Products", desc: "Custom tools and digital experiences.", badge: "Coming Soon" },
+  { icon: Package, title: "Digital Products", desc: "Custom tools and digital experiences." },
 ];
 
 const reasons = [
