@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Zap, Mail, Phone, MapPin } from "lucide-react";
+import { Zap, Mail, MessageCircle, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -59,7 +59,7 @@ export function Footer() {
                 <Mail className="h-4 w-4 text-neon-blue" /> hello@vitalvision.com
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4 text-neon-blue" /> +233 XX XXX XXXX
+                <MessageCircle className="h-4 w-4 text-neon-blue" /> +233 XX XXX XXXX
               </li>
             </ul>
           </div>
