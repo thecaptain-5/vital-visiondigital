@@ -39,7 +39,7 @@ const services = [
 ];
 
 const reasons = [
-  { icon: Cpu, title: "AI-Powered Workflows", desc: "We leverage AI to deliver faster, smarter results." },
+  
   { icon: Zap, title: "Faster Delivery", desc: "Projects completed in days, not months." },
   { icon: Star, title: "Premium Aesthetics", desc: "Every pixel is crafted for visual excellence." },
   { icon: TrendingUp, title: "Strategic Thinking", desc: "Design backed by data and business strategy." },
