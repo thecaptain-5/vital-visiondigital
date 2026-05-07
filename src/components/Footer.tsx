@@ -23,7 +23,7 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-4 uppercase tracking-wider">Services</h4>
             <ul className="space-y-2.5">
-              {["Web Design", "AI Websites", "Graphic Design", "Brand Identity", "Data Analytics"].map((s) => (
+              {["Web Design", "AI Websites", "Graphic Design", "Brand Identity"].map((s) => (
                 <li key={s}>
                   <Link to="/services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{s}</Link>
                 </li>
