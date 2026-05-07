@@ -40,7 +40,7 @@ const services = [
 
 const reasons = [
   
-  { icon: Zap, title: "Faster Delivery", desc: "Projects completed in days, not months." },
+  { icon: Zap, title: "Faster Delivery", desc: "10x" },
   { icon: Star, title: "Premium Aesthetics", desc: "Every pixel is crafted for visual excellence." },
   { icon: TrendingUp, title: "Strategic Thinking", desc: "Design backed by data and business strategy." },
   { icon: Shield, title: "Affordable Innovation", desc: "World-class quality at competitive pricing." },
